@@ -13,7 +13,14 @@ repositories {
 }
 
 dependencies {
+    implementation("com.jessecorbett:diskord-bot:3.0.2")
     testImplementation(kotlin("test"))
+}
+
+configurations {
+    implementation {
+        exclude("org.slf4j", "slf4j-simple")
+    }
 }
 
 tasks.test {
